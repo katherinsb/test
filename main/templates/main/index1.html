@@ -1,0 +1,15 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+	<title>inicio</title>
+	{%load static from staticfiles %}
+</head>
+<body>
+	<h1 class="dos">inico</h1>
+
+	{%for item in list%}
+	<p><a href="{{item.documento.url}}">{{item.nombre}}</a></p>
+	{%endfor%}
+</body>
+</html>

@@ -1,0 +1,274 @@
+<!DOCTYPE html>
+<!-- 
+Template Name: Job Pro
+Version: 1.0.0
+Author: 
+Website: 
+Purchase: 
+-->
+<!--[if IE 8]> <html lang="en" class="ie8 no-js"> <![endif]-->
+<!--[if IE 9]> <html lang="en" class="ie9 no-js"> <![endif]-->
+<!--[if !IE]><!-->
+<html lang="en">
+<!--<![endif]-->
+
+<head>
+    <meta charset="utf-8" />
+    <title>Temco SAS</title>
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+    <meta name="MobileOptimized" content="320" />
+
+    {%load static from staticfiles %}
+    <link rel="stylesheet" href="{% static './main/css/styles.css' %}">
+        <!-- Main CSS --> 
+    <!--srart theme style -->
+    <link rel="stylesheet" type="text/css" href="{% static './main/css/animate.css' %}" />
+    <link rel="stylesheet" type="text/css" href="{% static './main/css/bootstrap.css' %}" />
+    <link rel="stylesheet" type="text/css" href="{% static './main/css/font-awesome.css' %}" />
+    <link rel="stylesheet" type="text/css" href="{% static './main/css/fonts.css' %}" />
+    <link rel="stylesheet" type="text/css" href="{% static './main/css/reset.css' %}" />
+    <link rel="stylesheet" type="text/css" href="{% static './main/css/owl.carousel.css' %}" />
+    <link rel="stylesheet" type="text/css" href="{% static './main/css/owl.theme.default.css' %}" />
+    <link rel="stylesheet" type="text/css" href="{% static './main/css/flaticon.css' %}" />
+    <link rel="stylesheet" type="text/css" href="{% static './main/css/style_II.css' %}" />
+    <link rel="stylesheet" type="text/css" href="{% static './main/css/responsive2.css' %}" />
+    <!-- favicon links 
+    <link rel="shortcut icon" type="image/png" href="images/header/favicon.ico" />
+    -->
+    <link rel="shortcut icon" type="image/png" href="{% static './main/images/header/favicon.ico' %}" />
+</head>
+
+<body>
+    <!-- preloader Start -->
+    <div id="preloader">
+        <div id="status"><img src="images/header/loadinganimation.gif" id="preloader_image" alt="loader">
+        </div>
+    </div>
+    <!-- Top Scroll End -->
+    <!--Head -->
+        <!-- Main navigation -->
+        <nav class="navbar navbar-expand-md navbar-dark">
+            <div class="container">
+
+                <!-- Company name shown on mobile -->
+                <!--<a class="navbar-brand" href="#">Company<span>Name</span></a>-->
+
+                <img title="Temco SAS" class="img-responsive" alt="Logo" src="{% static './main/images/header/logo.png' %}">
+
+                <!-- Mobile menu toggle -->
+                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#mainNavbar" aria-controls="mainNavbar" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+
+                <!-- Main navigation items -->
+                <div class="collapse navbar-collapse" id="mainNavbar">
+                    <ul class="navbar-nav mr-auto justify-content-end">
+                        <li class="nav-item active">
+                                <a class="nav-link" href="/">Inicio<span class="sr-only">(current)</span></a>
+                        </li>
+
+                        <li class="nav-item dropdown">
+                                    <a class="nav-link dropdown-toggle" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">Servicios</a>
+                                    <!--Examples &amp; Pages-->
+                                    <div class="dropdown-menu navbar-dark bg-primary">
+                                          <a class="dropdown-item" href="/trabajo">Ofertas de empleo</a>
+                                        </div>
+                        </li>
+
+
+                        <li class="nav-item">
+                                <a class="nav-link" href="#">Beneficios</a>
+                        </li>
+
+                        <li class="nav-item">
+                                <a class="nav-link" href="#">Productos</a>
+                        </li>
+
+                        <li class="nav-item">
+                                <a class="nav-link" href="/contacto">Contactos</a>
+                        </li>
+                        <li class="has-children">
+                        
+                    </ul>
+
+                </div>
+
+
+
+
+            </div>
+        </nav>
+
+    <div class="container">
+    
+    <!-- jp profile Wrapper Start -->
+    <div class="jp_cp_profile_main_wrapper">
+        <div class="container">
+            <div class="row">
+                
+                <div class="col-lg-4 col-md-4 col-sm-12 col-xs-12">
+                    <div class="jp_cp_left_side_wrapper">
+                        {%for user in empleado%}
+                        <div class="jp_cp_left_pro_wallpaper">
+                            <img src="{{user.imagen.url}}" alt="profile_img">
+                            <!-- 
+                            <img src="{% static './main/images/content/cp1.png' %}" alt="profile_img">
+                            -->
+                            <h2>{{user.nombre}}</h2>
+                        </div>
+                        <div class="jp_cp_rd_wrapper">
+                            <ul>
+                                <div class="custom-input">
+                                    <span><a  href="{{user.curriculum.url}}">hola de vida</a></span>
+                                </div>
+                            </ul>
+                        </div>
+                        {%endfor%}
+                    </div>
+                    
+                </div>
+                
+                <div class="col-lg-8 col-md-8 col-sm-12 col-xs-12">
+                    <div class="jp_cp_right_side_wrapper">
+                        <div class="jp_cp_right_side_inner_wrapper">
+                            <h2>Datos personales</h2>
+                            {% for item in empleado%}
+                            <table>
+                                <tbody>
+                                    <tr>
+                                        <td class="td-w25">Nombre Completo</td>
+                                        <td class="td-w10">:</td>
+                                        <td class="td-w65">{{item.nombre}}</td>
+                                    </tr>
+                                    <tr>
+                                        <td class="td-w25">Direccion</td>
+                                        <td class="td-w10">:</td>
+                                        <td class="td-w65">{{item.direccion}}</td>
+                                    </tr>
+                                    <tr>
+                                        <td class="td-w25">Telefono</td>
+                                        <td class="td-w10">:</td>
+                                        <td class="td-w65">{{item.telefono}}</td>
+                                    </tr>
+                                    <tr>
+                                        <td class="td-w25">Correo Electronico</td>
+                                        <td class="td-w10">:</td>
+                                        <td class="td-w65">{{item.correo}}</td>
+                                    </tr>
+                                    <tr>
+                                        <td class="td-w25">Numero de Cedula</td>
+                                        <td class="td-w10">:</td>
+                                        <td class="td-w65">{{item.cedula}}</td>
+                                    </tr>
+
+                                </tbody>
+                            </table>
+                            {%endfor%}
+                        </div>
+                    </div>
+                </div>
+            
+
+            </div>
+            <div class="row">
+                <div class="col-lg-12 col-md-12 col-xs-12 col-sm-12">
+                    <div class="jp_cp_accor_heading_wrapper">
+                        <h2>Documentos y certificados</h2>
+                        <p></p>
+                    </div>
+                </div>
+                <div class="col-lg-12 col-md-12 col-xs-12 col-sm-12">
+                    <div class="accordion_wrapper abt_page_2_wrapper">
+                        <div class="panel-group" id="accordion_threeLeft">
+                            <!-- /.panel-default -->
+
+                            {%for item in documentos%}
+                            
+                            <div class="panel panel-default">
+                                <div class="panel-heading bell">
+                                    <h4 class="panel-title">
+                                        <a class="collapsed" data-toggle="collapse" data-parent="#accordion_threeLeft" href="#{{item.id}}" aria-expanded="false">
+                                {{item.tipo}} 
+                              </a>
+                                    </h4>
+                                </div>
+                                <div id="{{item.id}}" class="panel-collapse collapse" aria-expanded="false" role="tablist">
+                                    <div class="panel-body">
+                                        Este documeto fue publicado en {{item.fecha}}.<br>
+                                        <a href="{{item.documento.url}}">Click aqui para Descargar</a>
+                                    </div>
+                                </div>
+                            </div>
+
+                            {%endfor%}
+
+                            <!-- /.panel-default -->
+                        </div>
+                        <!--end of /.panel-group-->
+                    </div>
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="col-lg-12 col-md-12 col-xs-12 col-sm-12">
+                    <div class="jp_cp_accor_heading_wrapper">
+                        <h2>Peticiones y cetificados en proceso</h2>
+                        <p></p>
+                    </div>
+                </div>
+                <div class="col-lg-12 col-md-12 col-xs-12 col-sm-12">
+                    <div class="accordion_wrapper abt_page_2_wrapper">
+                        <div class="panel-group" id="accordion_threeLeft">
+                            <!-- /.panel-default -->
+
+                            <div class="jp_rightside_job_categories_content">
+                                <ul>
+                                    {%for item in solicitudes%}
+                                    <li><i class="fa fa-caret-right"></i> <a href="#"> La solicitud  {{item.tipo}} esta:  <span> {{item.estado}} </span></a></li>
+                                    {%endfor%}
+                                    <li> <a href="#"></a></li>
+                                </ul>
+                            </div>
+                            <div class="jp_rightside_job_categories_content">
+                                <p> {{mensaje}} </p>
+                                <form method="post">
+                                    {% csrf_token %}
+                                    {{form}}
+                                    <input type="submit" name="submit" class="submit" value="Guardar">
+                                </form>    
+                            </div>
+                                
+
+                            <!-- /.panel-default -->
+                        </div>
+                        <!--end of /.panel-group-->
+                    </div>
+                </div>
+            </div>
+
+
+
+        </div>
+    </div>
+    </div>
+    <!-- jp profile Wrapper End -->
+    
+    <!-- jp Newsletter Wrapper Start -->
+    <footer class="footer">
+            <p style="text-align: center;">Todos los derechos reservados Tempo S.A.S. 2019</p>
+        </footer>
+    <!-- jp footer Wrapper End -->
+    <!--main js file start-->
+    <script src="{% static './main/js/jquery_min.js' %}"></script>
+    <script src="{% static './main/js/bootstrap.js' %}"></script>
+    <script src="{% static './main/js/jquery.menu-aim.js' %}"></script>
+    <script src="{% static './main/js/jquery.countTo.js' %}"></script>
+    <script src="{% static './main/js/jquery.inview.min.js' %}"></script>
+    <script src="{% static './main/js/owl.carousel.js' %}"></script>
+    <script src="{% static './main/js/modernizr.js' %}"></script>
+    <script src="{% static './main/js/jquery.magnific-popup.js' %}"></script>
+    <script src="{% static './main/js/custom_II.js' %}"></script>
+    <!--main js file end-->
+</body>
+
+</html>

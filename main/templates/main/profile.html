@@ -1,0 +1,374 @@
+<!doctype html>
+<html lang="en">
+	<head>
+        <title>Temco SAS</title>
+
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+        
+        <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+        
+        <meta name="MobileOptimized" content="320" />
+
+        <!-- Main CSS --> 
+        {%load static from staticfiles %}
+
+        <!-- Main CSS --> 
+        <link rel="stylesheet" href="{% static './main/css/styles.css' %}">
+         <!--srart theme style -->
+        <link rel="stylesheet" type="text/css" href="{% static './main/css/animate.css' %}" />
+        <link rel="stylesheet" type="text/css" href="{% static './main/css/bootstrap.css' %}" />
+        <link rel="stylesheet" type="text/css" href="{% static './main/css/font-awesome.css' %}" />
+        <link rel="stylesheet" type="text/css" href="{% static './main/css/fonts.css' %}" />
+        <link rel="stylesheet" type="text/css" href="{% static './main/css/reset.css' %}" />
+        <link rel="stylesheet" type="text/css" href="{% static './main/css/owl.carousel.css' %}" />
+        <link rel="stylesheet" type="text/css" href="{% static './main/css/owl.theme.default.css' %}" />
+        <link rel="stylesheet" type="text/css" href="{% static './main/css/flaticon.css' %}" />
+        <link rel="stylesheet" type="text/css" href="{% static './main/css/style_II.css' %}" />
+        <link rel="stylesheet" type="text/css" href="{% static './main/css/responsive2.css' %}" />
+        <!-- favicon links 
+        <link rel="shortcut icon" type="image/png" href="images/header/favicon.ico" />
+        -->
+        <link rel="shortcut icon" type="image/png" href="{% static './main/images/header/favicon.ico' %}" />
+
+
+    
+            <!-- Font Awesome -->
+            <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
+
+    </head>
+  
+    <body>
+
+        <!-- Main navigation -->
+        <nav class="navbar navbar-expand-md navbar-dark">
+            <div class="container">
+
+                <!-- Company name shown on mobile -->
+                <!--<a class="navbar-brand" href="#">Company<span>Name</span></a>-->
+                <img title="Temco SAS" class="img-responsive" alt="Logo" src="images/header/logo.png">
+
+                <!-- Mobile menu toggle -->
+                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#mainNavbar" aria-controls="mainNavbar" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+
+                <!-- Main navigation items -->
+                <div class="collapse navbar-collapse" id="mainNavbar">
+                    <ul class="navbar-nav mr-auto justify-content-end">
+                        <li class="nav-item active">
+                                <a class="nav-link" href="index.html">Inicio<span class="sr-only">(current)</span></a>
+                        </li>
+
+                        <li class="nav-item dropdown">
+                                    <a class="nav-link dropdown-toggle" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">Servicios</a>
+                                    <!--Examples &amp; Pages-->
+                                    <div class="dropdown-menu navbar-dark bg-primary">
+                                          <a class="dropdown-item" href="empresa.html">Empresas</a>
+                                          <a class="dropdown-item" href="IniciarSesion.html">Empleados</a>
+                                          <a class="dropdown-item" href="trabajo.html">Ofertas de empleo</a>
+                                          <a class="dropdown-item"  href="add_postin.html">Agregar empleo</a>
+                                          <a class="dropdown-item"  href="candidate_profile.html">Perfil del empleado</a>
+                                    </div>
+                        </li>
+
+
+                        <li class="nav-item">
+                                <a class="nav-link" href="#">Beneficios</a>
+                        </li>
+
+                        <li class="nav-item">
+                                <a class="nav-link" href="#">Productos</a>
+                        </li>
+
+                        <li class="nav-item">
+                                <a class="nav-link" href="about.html">Contactos</a>
+                        </li>
+                        <li class="has-children">
+                        <div class="jp_top_header_right_cont">
+                                <li><a href="login.html"><i class="fa fa-sign-in"></i>&nbsp; LOGIN</a></li>
+                            
+                        </div>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+
+        <!-- Jumbtron / Slider -->
+        <div class="jumbotron-wrap jumbotron-image mb-0">
+            <div class="container">
+                <div id="mainCarousel" class="carousel slide" data-ride="carousel">
+                    <div class="carousel-inner">
+                        <div class="carousel-item active">
+                            <div class="jumbotron">
+                                <h1 class="text-center">OFERTAS LABORALES </h1>
+                                <p class="lead text-center">Si está buscando cambiar su futuro laboral, tenemos una gran variedad de ofertas de trabajo que seguramente encajarán en su proyecto de vida.</p>
+                                <p class="lead text-center">
+                                    <a href="#" class="btn btn-primary">&nbsp;Contactanos</a>
+                                    <a href="#" class="btn btn-secondary">&nbsp;Leer mas</a>
+                                </p>
+                            </div>
+                        </div>
+
+                        <div class="carousel-item">
+                            <div class="jumbotron">
+                                <h1 class="text-center">PORTAFOLIO DE SERVICIOS PARA EMPRESAS</h1>
+                                <p class="lead text-center">Ofrecemos servicios en recutlamiento, selección, contratación, outsourcing o administración de recursos humanos. Te ayudamos a encontrar el personal calificado.</p>
+                                <p class="lead text-center">
+                                    <a href="#" class="btn btn-primary">&nbsp;Contactanos</a>
+                                    <a href="#" class="btn btn-secondary">&nbsp;Leer mas</a>
+                                </p>
+                            </div>
+                        </div>
+
+                        <div class="carousel-item">
+                            <div class="jumbotron">
+                                <h1 class="text-center">NOTI TEMCO</h1>
+                                <p class="lead text-center">Encuentra información acerca de las últimas noticias relacionadas con empleo. Las noticias más actualizadas que te interesan y te ayudaran a conocer todos los beneficios que Temco te brinda. </p>
+                                <p class="lead text-center">
+                                    <a href="#" class="btn btn-primary">&nbsp;Contactanos</a>
+                                    <a href="#" class="btn btn-secondary">&nbsp;Leer mas</a>
+                                </p>
+                            </div>
+                        </div>
+
+                    </div>
+
+                    <a class="carousel-control-prev" href="#mainCarousel" role="button" data-slide="prev">
+                            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                            <span class="sr-only">Previous</span>
+                    </a>
+                    <a class="carousel-control-next" href="#mainCarousel" role="button" data-slide="next">
+                            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                        <span class="sr-only">Next</span>
+                    </a>
+                </div>
+            </div>
+        </div>
+        
+        <!-- Main content area -->
+<!-- jp profile Wrapper Start -->
+
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-4 col-md-4 col-sm-12 col-xs-12">
+                <div class="jp_cp_left_side_wrapper">
+                    <div class="jp_cp_left_pro_wallpaper">
+                        <img src="images/content/cp1.png" alt="profile_img">
+                        <h2>Farhan Shaikh</h2>
+                        <p>UI/UX Designer in Dewas</p>
+                        <ul>
+                            <li><a href="#"><i class="fa fa-facebook"></i></a></li>
+                            <li><a href="#"><i class="fa fa-twitter"></i></a></li>
+                            <li><a href="#"><i class="fa fa-youtube-play"></i></a></li>
+                        </ul>
+                    </div>
+                    <div class="jp_cp_rd_wrapper">
+                        <ul>
+                            <li><a href="#"><i class="fa fa-download"></i> &nbsp;Download Resume</a></li>
+                            <li><a href="#"><i class="fa fa-phone"></i> &nbsp;Contact candidate</a></li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="jp_add_resume_wrapper jp_job_location_wrapper jp_cp_left_ad_res">
+                    <div class="jp_add_resume_img_overlay"></div>
+                    <div class="jp_add_resume_cont">
+                        <img src="images/content/resume_logo.png" alt="logo" />
+                        <h4>Get Best Matched Jobs On your Email. Add Resume NOW!</h4>
+                        <ul>
+                            <li><a href="#"><i class="fa fa-plus-circle"></i> &nbsp;ADD RESUME</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-8 col-md-8 col-sm-12 col-xs-12">
+                <div class="jp_cp_right_side_wrapper">
+                    <div class="jp_cp_right_side_inner_wrapper">
+                        <h2>PERSONAL DETAILS</h2>
+                        <table>
+                            <tbody>
+                                <tr>
+                                    <td class="td-w25">Full Name</td>
+                                    <td class="td-w10">:</td>
+                                    <td class="td-w65">Farhan Shaikh</td>
+                                </tr>
+                                <tr>
+                                    <td class="td-w25">Father's Name</td>
+                                    <td class="td-w10">:</td>
+                                    <td class="td-w65">------</td>
+                                </tr>
+                                <tr>
+                                    <td class="td-w25">Address</td>
+                                    <td class="td-w10">:</td>
+                                    <td class="td-w65">Street 110-B Kalani Bag, Dewas, M.P. INDIA</td>
+                                </tr>
+                                <tr>
+                                    <td class="td-w25">Zip Code</td>
+                                    <td class="td-w10">:</td>
+                                    <td class="td-w65">12345</td>
+                                </tr>
+                                <tr>
+                                    <td class="td-w25">Phone</td>
+                                    <td class="td-w10">:</td>
+                                    <td class="td-w65">+0 123456789 , +0 123456789</td>
+                                </tr>
+                                <tr>
+                                    <td class="td-w25">Email</td>
+                                    <td class="td-w10">:</td>
+                                    <td class="td-w65">support@example.com</td>
+                                </tr>
+                                <tr>
+                                    <td class="td-w25">Website</td>
+                                    <td class="td-w10">:</td>
+                                    <td class="td-w65">http://example.com</td>
+                                </tr>
+
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-lg-12 col-md-12 col-xs-12 col-sm-12">
+                        <div class="jp_cp_accor_heading_wrapper">
+                            <h2>Education</h2>
+                            <p>Proin gravida nibh vel velit quet. Aenean sollicitudin, lorem quis bibendum auctor, nisi elit consequat ipsum, nec sagittis sem nibh id elit. Duis sed odio sit amet nibh vulpuate cursus a sit amet mauris. Morbi accumsan ipsum velit. Nam nec tellus a odio tincidunt.</p>
+                        </div>
+                    </div>
+                    <div class="col-lg-12 col-md-12 col-xs-12 col-sm-12">
+                        <div class="accordion_wrapper abt_page_2_wrapper">
+                            <div class="panel-group" id="accordion_threeLeft">
+
+
+                                <!-- /.panel-default -->
+                                <div class="panel panel-default">
+                                    <div class="panel-heading bell">
+                                        <h4 class="panel-title">
+                                            <a class="collapsed" data-toggle="collapse" data-parent="#accordion_threeLeft" href="#collapseTwentyLeftThree" aria-expanded="false">
+                                    DIPLOMA IN COMPUTER 
+                                  </a>
+                                        </h4>
+                                    </div>
+                                    <div id="collapseTwentyLeftThree" class="panel-collapse collapse" aria-expanded="false" role="tablist">
+                                        <div class="panel-body">
+                                            Praesent in nisl egestas mauris aliquam luctus. Ut auctor faucibus orci, nec semper purus ultrices idorbi nec lorem risus orbi vitae felis gravida Pellentesque id eros quis massa convallis feugiat eu quis urna.
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="panel panel-default">
+                                    <div class="panel-heading bell">
+                                        <h4 class="panel-title">
+                                            <a class="collapsed" data-toggle="collapse" data-parent="#accordion_threeLeft" href="#collapseTwentyLeftThree2" aria-expanded="false">
+                                    HIGHER SECONDRY EDUCATION 
+                                  </a>
+                                        </h4>
+                                    </div>
+                                    <div id="collapseTwentyLeftThree2" class="panel-collapse collapse" aria-expanded="false" role="tablist">
+                                        <div class="panel-body">
+                                            Praesent in nisl egestas mauris aliquam luctus. Ut auctor faucibus orci, nec semper purus ultrices idorbi nec lorem risus orbi vitae felis gravida Pellentesque id eros quis massa convallis feugiat eu quis urna.
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="panel panel-default">
+                                    <div class="panel-heading bell">
+                                        <h4 class="panel-title">
+                                            <a class="collapsed" data-toggle="collapse" data-parent="#accordion_threeLeft" href="#collapseTwentyLeftThree3" aria-expanded="false">
+                                    HIGH SCHOOL DEGREE
+                                  </a>
+                                        </h4>
+                                    </div>
+                                    <div id="collapseTwentyLeftThree3" class="panel-collapse collapse" aria-expanded="false" role="tablist">
+                                        <div class="panel-body">
+                                            Praesent in nisl egestas mauris aliquam luctus. Ut auctor faucibus orci, nec semper purus ultrices idorbi nec lorem risus orbi vitae felis gravida Pellentesque id eros quis massa convallis feugiat eu quis urna.
+                                        </div>
+                                    </div>
+                                </div>
+                                <!-- /.panel-default -->
+                            </div>
+                            <!--end of /.panel-group-->
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+<!-- jp profile Wrapper End -->
+        
+        
+
+        <!-- Footer -->
+        <footer class="footer">
+            <div class="footer-lists">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-sm">
+                            <ul>
+                                <li><h4>Proin accumsan</h4></li>
+                                <li><a href="#">Rutrum nulla a ultrices</a></li>
+                                <li><a href="#">Blandit elementum</a></li>
+                                <li><a href="#">Proin placerat accumsan</a></li>
+                                <li><a href="#">Morbi hendrerit libero </a></li>
+                                <li><a href="#">Curabitur sit amet tellus</a></li>
+                            </ul>
+                        </div>
+                        <div class="col-sm">
+                            <ul>
+                                <li><h4>Condimentum</h4></li>
+                                <li><a href="#">Curabitur sit amet tellus</a></li>
+                                <li><a href="#">Morbi hendrerit libero </a></li>
+                                <li><a href="#">Proin placerat accumsan</a></li>
+                                <li><a href="#">Rutrum nulla a ultrices</a></li>
+                                <li><a href="#">Cras dictum</a></li>
+                            </ul>
+                        </div>   
+                        <div class="col-sm">
+                            <ul>
+                                <li><h4>Suspendisse</h4></li>
+                                <li><a href="#">Morbi hendrerit libero </a></li>
+                                <li><a href="#">Proin placerat accumsan</a></li>
+                                <li><a href="#">Rutrum nulla a ultrices</a></li>
+                                <li><a href="#">Curabitur sit amet tellus</a></li>
+                                <li><a href="#">Donec in ligula nisl.</a></li>
+                            </ul>
+                        </div>
+                        <div class="col-sm">
+                            <h4>Suspendisse</h4>
+                            <p>Integer mattis blandit turpis, quis rutrum est. Maecenas quis arcu vel felis lobortis iaculis fringilla at ligula. Nunc dignissim porttitor dolor eget porta.</p>
+
+                            <p class="social-icons">
+                                <a href="#"><i class="fa fa-facebook fa-2x"></i></a>
+                                <a href="#"><i class="fa fa-twitter fa-2x"></i></a>
+                                <a href="#"><i class="fa fa-youtube fa-2x"></i></a>
+                                <a href="#"><i class="fa fa-instagram fa-2x"></i></a>
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            
+            <div class="footer-bottom">
+                    <p class="text-center">Develop by <a href="https://zypopwebtemplates.com/">ZyPop</a>.</p>
+                    <p class="text-center"><a href="#">Volver al Incio</a></p>
+            </div>
+            
+        </footer>
+
+
+
+        <!-- Bootcamp JavaScript -->
+        <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+        <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.3/umd/popper.min.js" integrity="sha384-vFJXuSJphROIrBnz7yo7oB41mKfc8JzQZiCq4NCceLEaO4IHwicKwpJf9c9IpFgh" crossorigin="anonymous"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/js/bootstrap.min.js" integrity="sha384-alpBpkh1PFOepccYVYDB4do5UnbKysX5WZXm3XxPqe5iKTfUKjNkCk9SaVuEZflJ" crossorigin="anonymous"></script>
+        <script src="js/jquery_min.js"></script>
+        <script src="js/bootstrap.js"></script>
+        <script src="js/jquery.menu-aim.js"></script>
+        <script src="js/jquery.countTo.js"></script>
+        <script src="js/jquery.inview.min.js"></script>
+        <script src="js/owl.carousel.js"></script>
+        <script src="js/modernizr.js"></script>
+        <script src="js/jquery.magnific-popup.js"></script>
+        <script src="js/custom_II.js"></script>
+    </body>
+</html>
