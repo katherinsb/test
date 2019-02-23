@@ -1,0 +1,92 @@
+{% extends 'base_2.html' %} 
+{%load static from staticfiles %}
+
+{% block content%}
+
+	<div class="jp_first_sidebar_main_wrapper">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-9 col-md-9 col-sm-12 col-xs-12">
+                    <div class="row">
+                        
+                        <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+                            <div class="cc_featured_product_main_wrapper">
+                                <div class="jp_hiring_heading_wrapper jp_job_post_heading_wrapper">
+                                    <h1>Noticias recientes</h1>
+                                </div>
+                            </div>
+                            <div class="tab-content">
+                                <div role="tabpanel" class="tab-pane fade in active" id="best">
+                                    <div class="ss_featured_products">
+                                                
+                                            <ul> 
+                                                {%for item in noticias%}
+                                                <div class="jp_listing_left_sidebar_wrapper">
+                                                    <div class="jp_job_des">
+                                                        <h2>{{item.titulo}}</h2>
+                                                        <p> {{item.descripcion}} </p>
+                                                        <ul>
+                                                            <li><i class="fa fa-globe"></i>&nbsp;&nbsp; <a href="{{item.enlace}}">Mas informacion...</a></li>
+                                                            <br>
+                                                            <label>Fecha de publicacion: {{item.fecha}}</label>
+                                                            <br>
+
+                                                        </ul>
+                                                    </div>
+                                                </div>
+                                                
+                                                {%endfor%}
+                                            </ul>    
+                                            
+                                    </div>
+                                </div>
+                                
+                        </div>
+                        <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+                            <div class="jp_register_section_main_wrapper">
+                                
+
+                            </div>
+                        </div>
+                    </div>
+                </div>
+               
+            </div>
+        </div>
+    </div>
+    <!-- jp first sidebar Wrapper End -->
+    <!-- jp counter Wrapper Start -->
+    <div class="jp_counter_main_wrapper">
+        <div class="container">
+            <div class="gc_counter_cont_wrapper">
+                <div class="count-description">
+                    <span class="timer">{{numeroTrabajos}}</span><i class="fa fa-plus"></i>
+                    <h5 class="con1">Trabajos Disponibles</h5>
+                </div>
+            </div>
+            <div class="gc_counter_cont_wrapper2">
+                <div class="count-description">
+                    <span class="timer">{{empleados}}</span><i class="fa fa-plus"></i>
+                    <h5 class="con2">Empleados</h5>
+                </div>
+            </div>
+            <div class="gc_counter_cont_wrapper3">
+                <div class="count-description">
+                    <span class="timer">{{hojas}}</span><i class="fa fa-plus"></i>
+                    <h5 class="con3">Hojas de Vida</h5>
+                </div>
+            </div>
+            
+        </div>
+    </div>
+    <!-- jp counter Wrapper End -->
+    <!-- jp Best deals Wrapper Start -->
+    <!-- jp Best deals Wrapper End -->
+ 
+{% endblock%}
+
+
+
+
+
+    

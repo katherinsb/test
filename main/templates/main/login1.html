@@ -1,0 +1,29 @@
+{% extends 'base_2.html' %} 
+{%load static from staticfiles %}
+
+{% block content %}
+
+ <div class="container">
+                    <div class="row">
+                        <div class="col-md-8 col-md-offset-2">
+                            <!-- login_wrapper -->
+                            
+                            <form method="post" class="login_wrapper" name="inicio">
+                                   
+                                    <!--    
+                                        <input type="email" class="form-control" required="" id="email2" placeholder="Username*">
+                                    -->
+                                    {% csrf_token %}
+                                    {{form}}
+                                    <input class="submit-btn" type="submit" value="Ingresar">   
+                                <div class="login_message">
+                                    <p>Sólo para empleados registrados <a href="/contacto"> Comunicate con Nosotros </a> </p>
+                                </div>
+                            </form>
+                            
+                            <p>Sólo los empleados activos prodrán acceder a una cuenta</p>
+                            <!-- /.login_wrapper-->
+                        </div>
+                    </div>
+                </div>
+{% endblock %}

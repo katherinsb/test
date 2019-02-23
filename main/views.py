@@ -13,7 +13,7 @@ def index(request):
 	#context['list'] = Archivo.objects.latest('nombre')
 	
 	#print(context['list'])
-	return render(request, 'main/index.html',context)
+	return render(request, 'main/index1.html',context)
 
 
 def contacto(request):
@@ -45,7 +45,7 @@ def contacto(request):
 
 	form = Contacto()
 	context['form'] = form
-	return render(request, 'main/empresa.html',context)
+	return render(request, 'main/empresa1.html',context)
 
 
 def usuario(request):
@@ -68,7 +68,7 @@ def usuario(request):
 
 	form = Ingreso()
 	context['form'] = form
-	return render(request, 'main/IniciarSesion.html', context)
+	return render(request, 'main/login.html', context)
 
 
 
@@ -119,4 +119,4 @@ def noticias(request):
 	context['numeroTrabajos'] = len(Trabajo.objects.all())
 	context['hojas'] = 			len(Curriculum.objects.all())
 	context['noticias'] = Noticia.objects.all()
-	return render(request, 'main/noticia.html', context)
+	return render(request, 'main/noticia1.html', context)

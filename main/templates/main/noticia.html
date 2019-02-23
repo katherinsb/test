@@ -20,7 +20,7 @@
         {%load static from staticfiles %}
 
         <!-- Main CSS --> 
-        <link rel="stylesheet" href="{% static './main/css/styles.css' %}">
+        
     <!--srart theme style -->
     <link rel="stylesheet" type="text/css" href="{% static './main/css/animate.css' %}" />
     <link rel="stylesheet" type="text/css" href="{% static './main/css/bootstrap.css' %}" />
@@ -42,7 +42,7 @@
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
-
+        <link rel="stylesheet" href="{% static './main/css/styles.css' %}">
         <!-- Font Awesome -->
         <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
 
@@ -82,7 +82,7 @@
                                     <a class="nav-link dropdown-toggle" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">Servicios</a>
                                     <!--Examples &amp; Pages-->
                                     <div class="dropdown-menu navbar-dark bg-primary">
-                                          <a class="dropdown-item" href="trabajo.html">Ofertas de empleo</a>
+                                          <a class="dropdown-item" href="{% url 'main.views.trabajo' %}">Ofertas de empleo</a>
                                            
                                     </div>
                         </li>
