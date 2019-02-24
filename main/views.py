@@ -1,11 +1,13 @@
 from django.shortcuts import render, redirect
 from .models import Archivo, Estatico, Noticia, Trabajo, Empleado, Curriculum, Solicitud
-from .forms import Contacto, Ingreso, Peticion
+from .forms import Contacto, Ingreso, Peticion, ActualizarCurriculum
 import datetime
 from django.core.mail import send_mail
 
 from django.urls import reverse
 from django.http import HttpResponseRedirect
+
+from django.contrib.auth.decorators import login_required
 
 def index(request):
 	context = {}
@@ -47,7 +49,7 @@ def contacto(request):
 	context['form'] = form
 	return render(request, 'main/empresa1.html',context)
 
-
+"""
 def usuario(request):
 	context = {}
 
@@ -69,39 +71,55 @@ def usuario(request):
 	form = Ingreso()
 	context['form'] = form
 	return render(request, 'main/login.html', context)
+"""
 
 
-
-
-def perfil(request, userid):
+@login_required
+def perfil(request):
 	
 	context= {}	
 	context['mensaje'] = ''
-	cedula = str(userid)
-	#print(cedula)
+	cedula = request.user.empleado.cedula
+	#print(request.POST)
+	
 	if request.method == "POST":
-		form = Peticion(request.POST)
-		if form.is_valid():
-			tipo = form.cleaned_data['seleccion']
-			user = Empleado.objects.get(cedula=cedula)
-			sin_revisar = len(Solicitud.objects.filter(empleado__cedula=cedula, tipo=tipo, estado='Sin revisar'))
-			en_proceso = len(Solicitud.objects.filter(empleado__cedula=cedula, tipo=tipo, estado='Sin revisar'))
-			if sin_revisar > 0 or en_proceso > 0:
-				context['mensaje'] = 'Ya existe una solicitud en proceso de este tipo'			
-				
-			else:
-				context['mensaje'] = ''
-				
-				registro = Solicitud(empleado=user ,tipo= tipo ,fecha=datetime.datetime.now()) 
-				registro.save()
-			#print(tipo)
+		if 'file' in request.POST:
+			form = ActualizarCurriculum(request.POST, request.FILES)
+			print(form.errors)
+			if form.is_valid():
 
+				documento = form.cleaned_data['documento']
+				t = Empleado.objects.get(cedula=cedula)
+				t.curriculum = documento
+				t.save()
+				
+				context['confirmacion']= "Tu hoja de vida se ha actualizado"
+		else:
+			form = Peticion(request.POST)
+			if form.is_valid():
+				tipo = form.cleaned_data['seleccion']
+				user = Empleado.objects.get(cedula=cedula)
+				sin_revisar = len(Solicitud.objects.filter(empleado__cedula=cedula, tipo=tipo, estado='Sin revisar'))
+				en_proceso 	= len(Solicitud.objects.filter(empleado__cedula=cedula, tipo=tipo, estado='Sin revisar'))
+				if sin_revisar > 0 or en_proceso > 0:
+					context['mensaje'] = 'Ya existe una solicitud en proceso de este tipo'			
+					
+				else:
+					context['mensaje'] = ''
+					
+					registro = Solicitud(empleado=user ,tipo= tipo ,fecha=datetime.datetime.now()) 
+					registro.save()
+				#print(tipo)
+	
 
 	context['form'] = Peticion()
+	context['file'] = ActualizarCurriculum()
 	context['empleado'] = Empleado.objects.filter(cedula=cedula)
 	context['documentos'] = Archivo.objects.filter(empleado__cedula=cedula)
 	context['solicitudes'] = Solicitud.objects.filter(empleado__cedula=cedula)
 	#print(context['documentos'])
+	
+	#return render(request, 'main/index.html')
 	return render(request, 'main/candidate_profile.html', context)
 
 

@@ -11,8 +11,8 @@ app_name= 'main'
 urlpatterns = [
     path('', views.index, name='index'),
     path('contacto', views.contacto, name='contacto'),
-    path('usuario', views.usuario, name='usuario'),
-    path('perfil/<int:userid>', views.perfil, name='perfil'),
+    #path('usuario', views.usuario, name='usuario'),
+    path('perfil', views.perfil, name='perfil'),
     path('trabajo', views.trabajo, name='trabajo'),
     path('noticias', views.noticias, name='noticias')
     

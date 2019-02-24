@@ -1,3 +1,4 @@
+{% load crispy_forms_tags %}
 <!doctype html>
 <html lang="en">
 	<head>
@@ -156,7 +157,7 @@
                                         <input type="email" class="form-control" required="" id="email2" placeholder="Username*">
                                     -->
                                     {% csrf_token %}
-                                    {{form}}
+                                    {{ form|crispy }}
                                     <input class="submit-btn" type="submit" value="Ingresar">   
                                 <div class="login_message">
                                     <p>Sólo para empleados registrados <a href="/contacto"> Comunicate con Nosotros </a> </p>

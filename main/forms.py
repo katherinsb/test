@@ -18,4 +18,8 @@ class CheckForm(forms.Form):
 
 
 class Peticion(forms.Form):
-	seleccion = forms.ChoiceField(choices=[('UNO', 'Cesrtificado de pago'), ('DOS', 'certifiado de trabajo'), ('TRES', 'certificado de seguro')], widget=forms.Select(), label="Escoja el documeto que desea solicitar")
+	seleccion = forms.ChoiceField(choices=[('Desprendible de pago', 'Desprendible de pago'), ('Certificado de tabajo', 'Certificado de tabajo'), ('Certificado de EPS', 'Certificado de EPS')], widget=forms.Select(), label="Escoja el documeto que desea solicitar")
+
+
+class ActualizarCurriculum(forms.Form):
+	documento = forms.FileField(widget=forms.FileInput(attrs={'id': 'resume', 'name':'resume'}))

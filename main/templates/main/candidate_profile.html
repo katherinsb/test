@@ -87,7 +87,15 @@ Purchase:
                         <li class="nav-item">
                                 <a class="nav-link" href="/contacto">Contactos</a>
                         </li>
+                        <li class="nav-item">
+                                <a class="nav-link" href="/perfil">Perfil</a>
+                        </li>
                         <li class="has-children">
+                        <div class="jp_top_header_right_cont">
+                                <li><a href="{% url 'logout' %}"><i class="fa fa-sign-in"></i>&nbsp; LOGOUT</a></li>
+                            
+                        </div>
+                        </li>
                         
                     </ul>
 
@@ -119,7 +127,15 @@ Purchase:
                         <div class="jp_cp_rd_wrapper">
                             <ul>
                                 <div class="custom-input">
-                                    <span><a  href="{{user.curriculum.url}}">hoja de vida</a></span>
+                                    <p>De Temco: Por favor manten tu hoja de vida actualizada para que podamos hacer mejor nuestro trabajo</p>
+                                    
+                                    <form method="post" name="file" enctype="multipart/form-data">
+                                    
+                                        {% csrf_token %}
+                                        {{ file }}
+                                        <input type="submit" name="file" value="Actualizar" class="submit">
+                                    </form>
+                                    <label>{{confirmacion}}</label>
                                 </div>
                             </ul>
                         </div>
@@ -159,6 +175,11 @@ Purchase:
                                         <td class="td-w25">Numero de Cedula</td>
                                         <td class="td-w10">:</td>
                                         <td class="td-w65">{{item.cedula}}</td>
+                                    </tr>
+                                    <tr>
+                                        <td class="td-w25">Tu hoja de vida</td>
+                                        <td class="td-w10">:</td>
+                                        <td class="td-w65"> <a href="{{item.curriculum.url}}"> Descargar</a> </td>
                                     </tr>
 
                                 </tbody>
@@ -231,7 +252,7 @@ Purchase:
                             </div>
                             <div class="jp_rightside_job_categories_content">
                                 <p> {{mensaje}} </p>
-                                <form method="post">
+                                <form method="post" name="form">
                                     {% csrf_token %}
                                     {{form}}
                                     <input type="submit" name="submit" class="submit" value="Guardar">
