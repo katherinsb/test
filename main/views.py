@@ -49,30 +49,6 @@ def contacto(request):
 	context['form'] = form
 	return render(request, 'main/empresa1.html',context)
 
-"""
-def usuario(request):
-	context = {}
-
-	if request.method == 'POST':
-		form = Ingreso(request.POST)
-		if form.is_valid():
-			cedula = form.cleaned_data['cedula']
-			consulta = Empleado.objects.filter(cedula=cedula)
-			if len(consulta) > 0:
-
-				context['form'] = Peticion()			
-				context['empleado'] = consulta
-				context['documentos'] = Archivo.objects.filter(empleado__cedula=cedula)
-				context['Solicitudes'] = Solicitud.objects.filter(empleado__cedula=cedula)
-				return HttpResponseRedirect(reverse("main:perfil", args=(int(cedula),)))
-				#return render(request, 'main/candidate_profile.html', context)
-
-
-	form = Ingreso()
-	context['form'] = form
-	return render(request, 'main/login.html', context)
-"""
-
 
 @login_required
 def perfil(request):
@@ -129,12 +105,10 @@ def trabajo(request):
 	context['empleados'] = 		len(Empleado.objects.all())
 	context['numeroTrabajos'] = len(context['trabajos'])
 	context['hojas'] = 			len(Curriculum.objects.all())
-	return render(request, 'main/trabajo.html', context)
+	return render(request, 'main/trabajo1.html', context)
 
 def noticias(request):
 	context = {}
-	context['empleados'] = 		len(Empleado.objects.all())
-	context['numeroTrabajos'] = len(Trabajo.objects.all())
-	context['hojas'] = 			len(Curriculum.objects.all())
 	context['noticias'] = Noticia.objects.all()
-	return render(request, 'main/noticia1.html', context)
+	return render(request, 'main/NotiTemco.html', context)
+	#return render(request, 'main/noticia1.html', context)
