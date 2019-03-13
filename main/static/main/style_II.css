@@ -37,6 +37,19 @@ body, html {
 	color: #797979;
 	overflow-x:hidden;
 }
+body {
+	margin: 0;
+	font-family: "Source Sans Pro", Arial, "sans-serif";
+	font-size: 1rem;
+	font-weight: 300;
+	line-height: 2.2;
+	color: #999999;
+	text-align: left;
+	background-color: #fff; }
+  
+  [tabindex="-1"]:focus {
+	outline: 0 !important; }
+
 /*---------- Custom Css Start -------*/
 /*-- Preloader css start --*/
 #preloader {
@@ -74,7 +87,14 @@ a:hover, a:focus {
 	text-decoration: none;
 	outline: none;
 }
-h1, h2, h3, h4, h5, h6, .h1, .h2, .h3, .h4, .h5, .h6 {
+h1, .h1{
+	font-family: "Source Sans Pro", Arial, "sans-serif";
+	line-height: 1.1;
+	color: #222222;
+	margin:0;
+	padding:0;
+}
+h2, h3, h4, h5, h6, .h2, .h3, .h4, .h5, .h6 {
 	font-family: 'Montserrat', sans-serif;
 	line-height: 1.1;
 	color: #222222;
@@ -7484,7 +7504,7 @@ input[type="checkbox"]:checked + label:after {
     left: 12px;
 }
 .about_text_wrapper p {
-    font-size: 16px;
+    font-size: 18px;
     line-height: 26px;
 	margin-bottom: 20px;
 	    padding-top: 30px;

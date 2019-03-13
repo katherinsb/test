@@ -15,7 +15,20 @@ def index(request):
 	#context['list'] = Archivo.objects.latest('nombre')
 	
 	#print(context['list'])
-	return render(request, 'main/index1.html',context)
+	#return render(request, 'main/empresa.html',context)
+	return render(request, 'main/about__.html',context)
+	
+	
+def acerca(request):
+	#return render(request, 'main/contact__.html',context)
+	#return render(request, 'main/empresa__.html',context)
+	
+	return render(request, 'main/empresa__.html')
+
+
+def beneficios(request):
+	return render(request, 'main/Beneficios__.html')
+
 
 
 def contacto(request):
@@ -47,7 +60,8 @@ def contacto(request):
 
 	form = Contacto()
 	context['form'] = form
-	return render(request, 'main/empresa1.html',context)
+	#return render(request, 'main/contact.html',context)
+	return render(request, 'main/contact__.html',context)
 
 
 @login_required

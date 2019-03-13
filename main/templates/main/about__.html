@@ -1,0 +1,308 @@
+<!DOCTYPE html>
+<!-- 
+Template Name: Job Pro
+Version: 1.0.0
+Author: 
+Website: 
+Purchase: 
+-->
+<!--[if IE 8]> <html lang="en" class="ie8 no-js"> <![endif]-->
+<!--[if IE 9]> <html lang="en" class="ie9 no-js"> <![endif]-->
+<!--[if !IE]><!-->
+<html lang="en">
+<!--<![endif]-->
+
+<head>
+    <meta charset="utf-8" />
+    <title>Temco SAS</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="Job Pro" />
+    <meta name="keywords" content="Job Pro" />
+    <meta name="author" content="" />
+    <meta name="MobileOptimized" content="320" />
+    <!--srart theme style -->
+    {%load static from staticfiles %}
+    
+
+    <link rel="stylesheet" type="text/css" href="{% static './main/css/animate.css' %}" />
+    <link rel="stylesheet" type="text/css" href="{% static './main/css/font-awesome.css' %}" />
+    <link rel="stylesheet" type="text/css" href="{% static './main/css/fonts.css' %}" />
+    <link rel="stylesheet" type="text/css" href="{% static './main/css/reset.css' %}" />
+    <link rel="stylesheet" type="text/css" href="{% static './main/css/owl.carousel.css' %}" />
+    <link rel="stylesheet" type="text/css" href="{% static './main/css/owl.theme.default.css' %}" />
+    <link rel="stylesheet" type="text/css" href="{% static './main/css/flaticon.css' %}" />
+    <link rel="stylesheet" type="text/css" href="{% static './main/css/style_II.css'  %}" />
+    <link rel="stylesheet" type="text/css" href="{% static './main/css/responsive2.css' %}" />
+    <!-- favicon links -->
+    <!--<link rel="shortcut icon" type="image/png" href="images/header/favicon.ico" />-->
+    <!-- favicon links -->
+        <!-- Main CSS --> 
+        <link rel="stylesheet" href="{% static './main/css/styles.css' %}">
+
+        <!-- Font Awesome -->
+        <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
+</head>
+
+<body>
+    <!-- preloader Start -->
+
+    <!-- Top Scroll End -->
+      <!--Head -->
+        <!-- Main navigation -->
+       <!-- Main navigation -->
+       <nav class="navbar navbar-expand-md navbar-dark">
+            <div class="container">
+
+                <!-- Company name shown on mobile -->
+                <!--<a class="navbar-brand" href="#">Company<span>Name</span></a>-->
+                <img title="Temco SAS" class="img-responsive" alt="Logo" src="{% static './main/images/header/logo.png' %}">
+
+                <!-- Mobile menu toggle -->
+                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#mainNavbar" aria-controls="mainNavbar" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+
+                <!-- Main navigation items -->
+                <div class="collapse navbar-collapse" id="mainNavbar">
+                    <ul class="navbar-nav mr-auto justify-content-end">
+                        <li class="nav-item active">
+                                <a class="nav-link" href="/">Inicio<span class="sr-only">(current)</span></a>
+                        </li>
+
+                        <li class="nav-item dropdown">
+                                    <a class="nav-link dropdown-toggle" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">Servicios</a>
+                                    <!--Examples &amp; Pages-->
+                                    <div class="dropdown-menu navbar-dark bg-primary">
+                                          <a class="dropdown-item" href="/trabajo">Ofertas de empleo</a>
+                                           
+                                    </div>
+                        </li>
+
+
+                        <li class="nav-item">
+                                <a class="nav-link" href="/beneficios">Beneficios</a>
+                        </li>
+
+                        <li class="nav-item">
+                                <a class="nav-link" href="/acerca">Productos</a>
+                        </li>
+
+                        
+                        {% if user.is_authenticated %}
+                        <li class="nav-item">
+                                <a class="nav-link" href="/perfil">Perfil</a>
+                        </li>
+                        <li class="has-children">
+                            <div class="jp_top_header_right_cont">
+                                <li><a href="{% url 'logout' %}"><i class="fa fa-sign-in"></i>&nbsp; LOGOUT</a></li>
+                                
+                            </div>
+                        </li>                        
+                        {% else %}
+                        <li class="nav-item">
+                                <a class="nav-link" href="/contacto">Contactos</a>
+                        </li>
+                        <li class="has-children">
+                            <div class="jp_top_header_right_cont">
+                                <li><a href="{% url 'login' %}"><i class="fa fa-sign-in"></i>&nbsp; LOGIN</a></li>
+                                
+                            </div>
+                        </li>
+                        {% endif%}
+                        
+                    </ul>
+
+                </div>
+
+
+
+
+            </div>
+        </nav>
+
+     <!-- Jumbtron / Slider -->
+     <div class="jumbotron-wrap jumbotron-image mb-0">
+        <div class="container">
+            <div id="mainCarousel" class="carousel slide" data-ride="carousel">
+                <div class="carousel-inner">
+                    <div class="carousel-item active">
+                        <div class="jumbotron">
+                            <h1 class="text-center">OFERTAS LABORALES </h1>
+                            <p class="lead text-center">Si está buscando cambiar su futuro laboral, tenemos una gran variedad de ofertas de trabajo que seguramente encajarán en su proyecto de vida.</p>
+                            <p class="lead text-center">
+                                <a href="/contacto" class="btn btn-primary">&nbsp;Contactanos</a>
+                                <a href="/trabajo" class="btn btn-secondary">&nbsp;Leer mas</a>
+                            </p>
+                        </div>
+                    </div>
+
+                    <div class="carousel-item">
+                        <div class="jumbotron">
+                            <h1 class="text-center">PORTAFOLIO DE SERVICIOS PARA EMPRESAS</h1>
+                            <p class="lead text-center">Ofrecemos servicios en recutlamiento, selección, contratación, outsourcing o administración de recursos humanos. Te ayudamos a encontrar el personal calificado.</p>
+                            <p class="lead text-center">
+                                <a href="/contacto" class="btn btn-primary">&nbsp;Contactanos</a>
+                                <a href="/acerca" class="btn btn-secondary">&nbsp;Leer mas</a>
+                            </p>
+                        </div>
+                    </div>
+
+                    <div class="carousel-item">
+                        <div class="jumbotron">
+                            <h1 class="text-center">NOTI TEMCO</h1>
+                            <p class="lead text-center">Encuentra información acerca de las últimas noticias relacionadas con empleo. Las noticias más actualizadas que te interesan y te ayudaran a conocer todos los beneficios que Temco te brinda. </p>
+                            <p class="lead text-center">
+                                <a href="/contacto" class="btn btn-primary">&nbsp;Contactanos</a>
+                                <a href="/noticias" class="btn btn-secondary">&nbsp;Leer mas</a>
+                            </p>
+                        </div>
+                    </div>
+
+                </div>
+
+                <a class="carousel-control-prev" href="#mainCarousel" role="button" data-slide="prev">
+                        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                        <span class="sr-only">Previous</span>
+                </a>
+                <a class="carousel-control-next" href="#mainCarousel" role="button" data-slide="next">
+                        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                    <span class="sr-only">Next</span>
+                </a>
+            </div>
+        </div>
+    </div>
+
+      <!-- jp Tittle Wrapper Start -->
+      <div class="aboutus_section">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-6 col-md-6 col-xs-12 col-sm-12">
+                    <div class="about_text_wrapper">
+                        <div class="section_heading section_2_heading">
+                            <h2>NUESTRA <span>EMPRESA</span></h2>
+                        </div>
+                        <p>	Temporales Colombianos Temco S.A.S. es una organización especializada en la administración del recurso humano, con énfasis en la selección y suministro de personal para empresas industriales,  comerciales y de servicio, tanto nacionales como multinacionales.</p>
+                        <p>Para conseguir  nuestro objetivo TEMCO, pone a disposición de sus clientes, toda su capacidad de gestión tanto administrativa, técnica, logística, y financiera,  para ofrecerles  un servicio especializado, ágil y oportuno, de acuerdo a las condiciones cambiantes del contexto moderno.</p>
+                        <ul>
+                            <li><i class="fa fa-check-square" aria-hidden="true"></i><a href="#">Disponibles en todo momento</a>
+                            </li>
+                            <li><i class="fa fa-check-square" aria-hidden="true"></i><a href="#">Empresa líder en la adminitración y gestión del recurso humano.</a>
+                            </li>
+                            <li><i class="fa fa-check-square" aria-hidden="true"></i><a href="#">Optimización de procesos de selección.</a>
+                                    </li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="col-lg-6 col-md-6 col-xs-12 col-sm-12">
+                    <div class="about_image_wrapper">
+                        <img class="img-responsive" src="{% static './main/images/content/register_bg.jpg' %}" alt="about-img">
+                    </div>
+                </div>
+                <!-- aboutus_section end -->
+                <div class="aboutus_page_2_section">
+                    <div class="container">
+                        <div class="row">
+                            <div class="col-lg-6 col-md-6 col-xs-12 col-sm-12">
+                                <div class="about_text_wrapper">
+                                <div class="aboutus_text_section abt_txt_page_2">
+                                    <h2>Alianzas con <span>entidades</span></h2>
+                                    <p>Adicionalmente hemos realizados  alianzas, con entidades como:
+                                            A.R.L SURA, para brindar capacitación en áreas tan importantes como salud ocupacional, primeros auxilios, posiciones ergonómicas, sistemas de evacuación, enfermedades profesionales etc.
+                                            
+                                            Salud Total E.P.S, a través de  esta importante entidad se brindara capacitación para a prevenir enfermedades, campañas de vacunación, riesgo cardiovascular, cáncer oral, cáncer de cuello uterino y mama etc.
+                                            
+                                            Es importante resaltar que estos talleres se realizaran para todas las personas que la empresa usuaria estime pertinente, sean o no empleados de TEMCO.
+                                    </p>
+                                    <div class="row">
+                                        <div class="col-md-6">
+                                            <ul>
+                                                <li><i class="fa fa-arrow-circle-o-right" aria-hidden="true"></i>&nbsp;&nbsp;Audit &amp; Assurance</li>
+                                                <li><i class="fa fa-arrow-circle-o-right" aria-hidden="true"></i>&nbsp;&nbsp;Business Services</li>
+                                                <li><i class="fa fa-arrow-circle-o-right" aria-hidden="true"></i>&nbsp;&nbsp;IT Control Solutions</li>
+                                            </ul>
+                                        </div>
+                                        <div class="col-md-6">
+                                            <ul>
+                                                <li><i class="fa fa-arrow-circle-o-right" aria-hidden="true"></i>&nbsp;&nbsp;Audit &amp; Assurance</li>
+                                                <li><i class="fa fa-arrow-circle-o-right" aria-hidden="true"></i>&nbsp;&nbsp;Business Services</li>
+                                                <li><i class="fa fa-arrow-circle-o-right" aria-hidden="true"></i>&nbsp;&nbsp;IT Control Solutions</li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-lg-6 col-md-6 col-xs-12 col-sm-12">
+                            <div class="accordion_wrapper abt_page_2_wrapper">
+                                <div class="panel-group" id="accordion_threeLeft">
+                                    <div class="panel panel-default">
+                                        <div class="panel-heading desktop">
+                                            <h4 class="panel-title">
+                                                <a class="collapsed" data-toggle="collapse" data-parent="#accordion_threeLeft" href="#collapseTwentyLeftone" aria-expanded="true">
+                                        Nuestra Misión
+                                    </a>
+                                            </h4>
+                                        </div>
+                                        <div id="collapseTwentyLeftone" class="panel-collapse collapse" aria-expanded="true" role="tablist">
+                                            <div class="panel-body">
+                                                        <p>TEMCO S.A.S.  Es una compañía especializada en la gestión y manejo del recurso humano y su objetivo es alcanzar los más altos niveles de productividad laboral; En consecuencia TEMCO S.A.S. Mantendrá una infraestructura que le permita cumplir eficientemente con este propósito Trabajando  día a día  en la optimización de la gestión del recurso humano, con el propósito de generar valor agregado en beneficio de nuestros clientes, y de nuestros empleados.</p>    
+                                                        <p>El incremento de la productividad con seguridad en el trabajo es una prioridad para nuestra empresa, por esto implementamos y mejoramos continuamente nuestro clima organizacional, buscando en el proceso de selección perfiles que cumplan con los requisitos del empleado moderno.</p>
+                                                Praesent in nisl egestas mauris aliquam luctus. Ut auctor faucibus orci, nec semper purus ultrices idorbi nec lorem risus orbi vitae felis gravida Pellentesque id eros quis massa convallis feugiat eu quis urna.
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <!-- /.panel-default -->
+                                    <div class="panel panel-default">
+                                        <div class="panel-heading horn">
+                                            <h4 class="panel-title">
+                                                <a data-toggle="collapse" data-parent="#accordion_threeLeft" href="#collapseTwentyLeftTwo" aria-expanded="false">
+                                        Nuestra Vision
+                                    </a>
+                                    </h4>
+                                    </div>
+                                        <div id="collapseTwentyLeftTwo" class="panel-collapse collapse in" aria-expanded="false" role="tablist">
+                                            <div class="panel-body">
+                                                    Ser reconocida a nivel nacional, como la empresa líder en la administración  y gestión del recurso humano. Nuestro compromiso con la calidad y oportunidad en la prestación de servicios temporales, nos permitirá lograr ese reconocimiento.
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <!-- /.panel-default -->
+                                    <div class="panel panel-default">
+                                        <div class="panel-heading bell">
+                                            <h4 class="panel-title">
+                                                <a class="collapsed" data-toggle="collapse" data-parent="#accordion_threeLeft" href="#collapseTwentyLeftThree" aria-expanded="false">
+                                        Valor Agregado
+                                        </a>
+                                        </h4>
+                                        </div>
+                                        <div id="collapseTwentyLeftThree" class="panel-collapse collapse" aria-expanded="false" role="tablist">
+                                            <div class="panel-body">
+                                                    ·	Mediante la optimización de nuestros procesos de selección  y evaluación brindamos la certeza de consecución rápida de personal bajo la realización del reclutamiento, la preselección, aplicación de pruebas psicotécnicas a nivel operativo, de personalidad, valores, competencias laborales y específicas de acuerdo al cargo, entrevista y verificación de referencias. si la persona a vincular queda por intermedio de la temporal el proceso de selección no tendrá costo.
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <!-- /.panel-default -->
+                                </div>
+                                <!--end of /.panel-group-->
+                            </div>
+                        </div>
+                        <!--end of /.col-sm-6-->
+                </div>
+        </div>
+    </div>
+ </div>
+
+    <!-- jp Newsletter Wrapper Start -->
+    <div class="footer-bottom">
+        <p class="text-center">Todos los derechos reservados Tempo S.A.S. 2019</a>.</p>
+
+    </div>
+
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+            <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.3/umd/popper.min.js" integrity="sha384-vFJXuSJphROIrBnz7yo7oB41mKfc8JzQZiCq4NCceLEaO4IHwicKwpJf9c9IpFgh" crossorigin="anonymous"></script>
+            <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/js/bootstrap.min.js" integrity="sha384-alpBpkh1PFOepccYVYDB4do5UnbKysX5WZXm3XxPqe5iKTfUKjNkCk9SaVuEZflJ" crossorigin="anonymous"></script>
+       <!--<
+
+</body>
+
+</html>

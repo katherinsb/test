@@ -103,7 +103,7 @@ class Curriculum(models.Model):
 	correo 		= models.EmailField()
 	telefono1 	= models.IntegerField()
 	estado 		= models.CharField(max_length=20, choices=STATES, default=SIN_REVISAR)
-	texto 		= models.CharField(max_length=500, default='')
+	texto 		= models.TextField( default='')
 
 	def __str__(self):
 		return self.nombre
