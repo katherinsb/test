@@ -12,22 +12,31 @@ from django.contrib.auth.decorators import login_required
 def index(request):
 	context = {}
 	
-	#context['list'] = Archivo.objects.latest('nombre')
-	
+	context['logo'] = Estatico.objects.latest('telefono1')
+
 	#print(context['list'])
-	#return render(request, 'main/empresa.html',context)
-	return render(request, 'main/about__.html',context)
+	return render(request, 'main/index.html',context)
 	
-	
+ 
 def acerca(request):
+	context = {}
+	context['logo'] = Estatico.objects.latest('telefono1')
+	return render(request, 'main/acerca.html',context)
+
+		
+def servicios(request):
 	#return render(request, 'main/contact__.html',context)
 	#return render(request, 'main/empresa__.html',context)
-	
-	return render(request, 'main/empresa__.html')
+	context = {}
+	context['logo'] = Estatico.objects.latest('telefono1')
+	return render(request, 'main/servicios.html',context)
 
 
 def beneficios(request):
-	return render(request, 'main/Beneficios__.html')
+	context = {}
+	context['logo'] = Estatico.objects.latest('telefono1')
+	
+	return render(request, 'main/Beneficios__.html' , context)
 
 
 
@@ -35,6 +44,8 @@ def contacto(request):
 	context = {}
 	context['mensaje'] = ''
 	context['info'] = Estatico.objects.all()[:1]
+	context['logo'] = Estatico.objects.latest('telefono1')
+	
 	if request.method == "POST":
 		form = Contacto(request.POST, request.FILES)
 		if form.is_valid():
@@ -48,26 +59,26 @@ def contacto(request):
 			filtro_nombre = Curriculum.objects.filter(nombre=user)
 			filtro_correo = Curriculum.objects.filter(correo=correo)
 			if len(filtro_correo) > 0:
-				context['mensaje'] = 'Ya esta asociado el correo con otra hoja de vida'				
+				context['mensaje'] = 'Ya esta asociado el correo con otra hoja de vida.'				
 			elif len(filtro_nombre) > 0:
-				context['mensaje'] = 'Ya esta asociado el nombre con otra hoja de vida'
+				context['mensaje'] = 'Ya esta asociado el nombre con otra hoja de vida.'
 			else:				
 				 
 				registro = Curriculum(nombre=user, correo=correo, telefono1=numero, texto=texto, documento=documento)
 				registro.save()
 
-				context['mensaje'] = 'Hemos guardado su hoja de vida y su informacion de contacto, por favor espere a que nos comuniquenos con usted'
+				context['mensaje'] = 'Hemos guardado su hoja de vida y su informacion de contacto, por favor espere a que nos comuniquemos con usted.'
 
 	form = Contacto()
 	context['form'] = form
 	#return render(request, 'main/contact.html',context)
-	return render(request, 'main/contact__.html',context)
+	return render(request, 'main/contacto.html',context)
 
 
 @login_required
 def perfil(request):
-	
 	context= {}	
+	context['logo'] = Estatico.objects.latest('telefono1')
 	context['mensaje'] = ''
 	cedula = request.user.empleado.cedula
 	#print(request.POST)
@@ -110,19 +121,23 @@ def perfil(request):
 	#print(context['documentos'])
 	
 	#return render(request, 'main/index.html')
-	return render(request, 'main/candidate_profile.html', context)
+	return render(request, 'main/perfil.html', context)
 
 
 def trabajo(request):
 	context = {}
+	context['logo'] = Estatico.objects.latest('telefono1')
+	
 	context['trabajos'] = Trabajo.objects.all()
 	context['empleados'] = 		len(Empleado.objects.all())
 	context['numeroTrabajos'] = len(context['trabajos'])
 	context['hojas'] = 			len(Curriculum.objects.all())
-	return render(request, 'main/trabajo1.html', context)
+	return render(request, 'main/trabajo.html', context)
 
 def noticias(request):
 	context = {}
+	context['logo'] = Estatico.objects.latest('telefono1')
+	
 	context['noticias'] = Noticia.objects.all()
-	return render(request, 'main/NotiTemco.html', context)
+	return render(request, 'main/noticia.html', context)
 	#return render(request, 'main/noticia1.html', context)

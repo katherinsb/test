@@ -55,7 +55,11 @@ Purchase:
 
                 <!-- Company name shown on mobile -->
                 <!--<a class="navbar-brand" href="#">Company<span>Name</span></a>-->
+                <!--
                 <img title="Temco SAS" class="img-responsive" alt="Logo" src="{% static './main/images/header/logo.png' %}">
+                -->
+
+                <img title="Temco SAS" class="img-responsive" alt="Logo" src="{{logo.logo.url}}">
 
                 <!-- Mobile menu toggle -->
                 <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#mainNavbar" aria-controls="mainNavbar" aria-expanded="false" aria-label="Toggle navigation">
@@ -74,7 +78,7 @@ Purchase:
                                     <!--Examples &amp; Pages-->
                                     <div class="dropdown-menu navbar-dark bg-primary">
                                           <a class="dropdown-item" href="/trabajo">Ofertas de empleo</a>
-                                           
+                                          <a class="dropdown-item" href="/servicios">Servicios</a>  
                                     </div>
                         </li>
 
@@ -84,7 +88,7 @@ Purchase:
                         </li>
 
                         <li class="nav-item">
-                                <a class="nav-link" href="/acerca">Productos</a>
+                                <a class="nav-link" href="/acerca">Conocenos</a>
                         </li>
 
                         
@@ -108,17 +112,12 @@ Purchase:
                                 
                             </div>
                         </li>
-                        {% endif%}
-                        
+                        {% endif%}                
                     </ul>
-
                 </div>
-
-
-
-
             </div>
         </nav>
+
 
      <!-- Jumbtron / Slider -->
      <div class="jumbotron-wrap jumbotron-image mb-0">

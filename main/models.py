@@ -4,8 +4,6 @@ from django.contrib.auth.models import User
 
 class Estatico(models.Model):
 	titulo 		= models.CharField(max_length=45)
-	mision 		= models.TextField()
-	vision 		= models.TextField()
 	correo 		= models.EmailField(max_length=45)
 	telefono1 	= models.IntegerField()
 	telefono2 	= models.IntegerField()

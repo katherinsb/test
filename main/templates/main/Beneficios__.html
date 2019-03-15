@@ -31,7 +31,7 @@ Purchase:
     <link rel="stylesheet" type="text/css" href="{% static './main/css/owl.theme.default.css' %}" />
     <link rel="stylesheet" type="text/css" href="{% static './main/css/flaticon.css' %}" />
     <link rel="stylesheet" type="text/css" href="{% static './main/css/style_II.css' %}" />
-    <link rel="stylesheet" type="text/css" href="{% static './main/css/responsive2.css' &}" />
+    <link rel="stylesheet" type="text/css" href="{% static './main/css/responsive2.css' %}" />
     <!-- favicon links -->
     <!--<link rel="shortcut icon" type="image/png" href="images/header/favicon.ico" />-->
     <!-- favicon links -->
@@ -60,7 +60,11 @@ Purchase:
 
                 <!-- Company name shown on mobile -->
                 <!--<a class="navbar-brand" href="#">Company<span>Name</span></a>-->
+                <!--
                 <img title="Temco SAS" class="img-responsive" alt="Logo" src="{% static './main/images/header/logo.png' %}">
+                -->
+
+                <img title="Temco SAS" class="img-responsive" alt="Logo" src="{{logo.logo.url}}">
 
                 <!-- Mobile menu toggle -->
                 <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#mainNavbar" aria-controls="mainNavbar" aria-expanded="false" aria-label="Toggle navigation">
@@ -79,18 +83,17 @@ Purchase:
                                     <!--Examples &amp; Pages-->
                                     <div class="dropdown-menu navbar-dark bg-primary">
                                           <a class="dropdown-item" href="/trabajo">Ofertas de empleo</a>
-                                           
+                                          <a class="dropdown-item" href="/servicios">Servicios</a>  
                                     </div>
                         </li>
 
 
-                        
                         <li class="nav-item">
                                 <a class="nav-link" href="/beneficios">Beneficios</a>
                         </li>
 
                         <li class="nav-item">
-                                <a class="nav-link" href="/acerca">Productos</a>
+                                <a class="nav-link" href="/acerca">Conocenos</a>
                         </li>
 
                         
@@ -114,17 +117,12 @@ Purchase:
                                 
                             </div>
                         </li>
-                        {% endif%}
-                        
+                        {% endif%}                
                     </ul>
-
                 </div>
-
-
-
-
             </div>
         </nav>
+
 
      <!-- Jumbtron / Slider -->
      <div class="jumbotron-wrap jumbotron-image mb-0">
@@ -187,7 +185,7 @@ Purchase:
 
                         <div class="jp_best_deal_heading_wrapper">
                         <div class="jp_best_deal_heading">
-                            <h4>Beneficios a los empleados</h4>
+                            <h4 style="font-size: 40px !important;">Beneficios a los empleados</h4>
                         </div>
                     </div>
 
@@ -198,25 +196,25 @@ Purchase:
 
                     </div>    
                         <div class="section_heading section_2_heading">
-                           <p></p> <p></p><h2>COOPERATIVA MULTIACTIVA <span>GRUPO FUTURO</span></h2><p></p>
+                           <p></p> <p></p><h2 style="font-size: 35px !important;">COOPERATIVA MULTIACTIVA <span>GRUPO FUTURO</span></h2><p></p>
                         </div>
                                
-                        <ul>
-                                <li><i class="fa fa-check-square" aria-hidden="true"></i>·	Orientación profesional en selección. </li>
-                                <li><i class="fa fa-check-square" aria-hidden="true"></i>·	Afiliación al sistema de Seguridad Social desde el primer día de trabajo.</li>
-                                <li><i class="fa fa-check-square" aria-hidden="true"></i>·	Excelentes relaciones con las entidades de Seguridad Social respectivas.</li>
-                                <li><i class="fa fa-check-square" aria-hidden="true"></i>·	Puntualidad y exactitud en el pago en el sitio de trabajo.</li>
-                                <li><i class="fa fa-check-square" aria-hidden="true"></i>·	Permanente capacitación en cuanto a la prevención de accidentes  laborales, y  actualización de normas referentes a Seguridad Industrial. </li>
-                                <li><i class="fa fa-check-square" aria-hidden="true"></i>·	Por intermedio de la COOPERATIVA MULTIACTIVA GRUPO FUTURO los trabajadores pueden acceder a:</li>
-                                <li><i class="fa fa-check-square" aria-hidden="true"></i>-	Préstamo De Libre Inversión el cual se otorga a cada trabajador que lo requiera según la capacidad de endeudamiento que tenga por Nomina y se descuenta cada quincena según las cuotas a las cuales difiera el trabajador su préstamo.</li> 
-                                <li><i class="fa fa-check-square" aria-hidden="true"></i>-	Por otra parte los colaboradores pueden adquirir Perfumería importada tanto para hombre como para mujer y pagarlo por descuento quincenal de su nomina.</li> 
-                                <li><i class="fa fa-check-square" aria-hidden="true"></i>-	Ropa para dama, caballero o niño. </li> 
-                                <li><i class="fa fa-check-square" aria-hidden="true"></i>-	Convenio con almacenes ALKOSTO para adquisición de Electrodomésticos descontados por nómina. </li> 
-                                <li><i class="fa fa-check-square" aria-hidden="true"></i>-	Alianza con SAMSUNG para la adquisición de telefonía móvil.</li> 
-                                <li><i class="fa fa-check-square" aria-hidden="true"></i>-	Acuerdo con ELECTRODOMÉSTICOS MANSIÓN</li> 
-                                <li><i class="fa fa-check-square" aria-hidden="true"></i>-	Validación del bachillerato en el COLEGIO EDUCATIVO LICEO AUGUSTO COMTE.</li> 
-                                <li><i class="fa fa-check-square" aria-hidden="true"></i>-	Ferias Escolares y de Electrodomésticos una vez por año</li> 
-                                <li><i class="fa fa-check-square" aria-hidden="true"></i>-	Asociación con distribuidores estratégicos de TOSHIBA para la compra de tecnología de alta calidad.</li> 
+                        <ul >
+                                <li style="font-size: 30px !important;"><i class="fa fa-check-square" aria-hidden="true"></i>·	Orientación profesional en selección. </li>
+                                <li style="font-size: 30px !important;"><i class="fa fa-check-square" aria-hidden="true"></i>·	Afiliación al sistema de Seguridad Social desde el primer día de trabajo.</li>
+                                <li style="font-size: 30px !important;"><i class="fa fa-check-square" aria-hidden="true"></i>·	Excelentes relaciones con las entidades de Seguridad Social respectivas.</li>
+                                <li style="font-size: 30px !important;"> <i class="fa fa-check-square" aria-hidden="true"></i>·	Puntualidad y exactitud en el pago en el sitio de trabajo.</li>
+                                <li style="font-size: 30px !important;"><i class="fa fa-check-square" aria-hidden="true"></i>·	Permanente capacitación en cuanto a la prevención de accidentes  laborales, y  actualización de normas referentes a Seguridad Industrial. </li>
+                                <li style="font-size: 30px !important;" ><i class="fa fa-check-square" aria-hidden="true"></i>·	Por intermedio de la COOPERATIVA MULTIACTIVA GRUPO FUTURO los trabajadores pueden acceder a:</li>
+                                <li style="font-size: 30px !important;"><i class="fa fa-check-square" aria-hidden="true"></i>-	Préstamo De Libre Inversión el cual se otorga a cada trabajador que lo requiera según la capacidad de endeudamiento que tenga por Nomina y se descuenta cada quincena según las cuotas a las cuales difiera el trabajador su préstamo.</li> 
+                                <li style="font-size: 30px !important;" ><i class="fa fa-check-square" aria-hidden="true"></i>-	Por otra parte los colaboradores pueden adquirir Perfumería importada tanto para hombre como para mujer y pagarlo por descuento quincenal de su nomina.</li> 
+                                <li style="font-size: 30px !important;"><i class="fa fa-check-square" aria-hidden="true"></i>-	Ropa para dama, caballero o niño. </li> 
+                                <li style="font-size: 30px !important;"><i class="fa fa-check-square" aria-hidden="true"></i>-	Convenio con almacenes ALKOSTO para adquisición de Electrodomésticos descontados por nómina. </li> 
+                                <li style="font-size: 30px !important;"><i class="fa fa-check-square" aria-hidden="true"></i>-	Alianza con SAMSUNG para la adquisición de telefonía móvil.</li> 
+                                <li style="font-size: 30px !important;"><i class="fa fa-check-square" aria-hidden="true"></i>-	Acuerdo con ELECTRODOMÉSTICOS MANSIÓN</li> 
+                                <li style="font-size: 30px !important;"><i class="fa fa-check-square" aria-hidden="true"></i>-	Validación del bachillerato en el COLEGIO EDUCATIVO LICEO AUGUSTO COMTE.</li> 
+                                <li style="font-size: 30px !important;"><i class="fa fa-check-square" aria-hidden="true"></i>-	Ferias Escolares y de Electrodomésticos una vez por año</li> 
+                                <li style="font-size: 30px !important;"><i class="fa fa-check-square" aria-hidden="true"></i>-	Asociación con distribuidores estratégicos de TOSHIBA para la compra de tecnología de alta calidad.</li> 
                                 <br></br>
                                 <br></br>
                             </ul>

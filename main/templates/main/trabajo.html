@@ -2,6 +2,10 @@
 {% extends 'base_2.html' %} 
 {%load static from staticfiles %}
 
+{% block logo %}
+  <img title="Temco SAS" class="img-responsive" alt="Logo" src="{{logo.logo.url}}">
+{% endblock %}
+
 {% block content%}
 <div class="jp_first_sidebar_main_wrapper">
         <div class="container">

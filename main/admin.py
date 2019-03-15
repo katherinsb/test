@@ -45,7 +45,6 @@ class SolicitudAdmin(admin.ModelAdmin):
 	class Meta:	
 		model = Solicitud
 
-# faltan filtros de strings para Empleado archivo-empleado solicitud empleado
 
 class EmpleadoInLine(admin.StackedInline):
 	model = Empleado
@@ -70,6 +69,3 @@ admin.site.register(Curriculum, CurriculumAdmin)
 admin.site.register(Solicitud, SolicitudAdmin)
 
 
-
-
-# Register your models here.

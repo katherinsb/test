@@ -1,6 +1,11 @@
 {% extends 'base.html' %} 
 {%load static from staticfiles %}
 
+{% block logo %}
+  <img title="Temco SAS" class="img-responsive" alt="Logo" src="{{logo.logo.url}}">
+{% endblock %}
+
+
 {% block content%}
         <!-- Main content area -->
 

@@ -45,8 +45,11 @@
 
                 <!-- Company name shown on mobile -->
                 <!--<a class="navbar-brand" href="#">Company<span>Name</span></a>-->
+                <!--
                 <img title="Temco SAS" class="img-responsive" alt="Logo" src="{% static './main/images/header/logo.png' %}">
+                -->
 
+               <img title="Temco SAS" class="img-responsive" alt="Logo" src="{% static './main/images/header/logo.png' %}">
                 <!-- Mobile menu toggle -->
                 <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#mainNavbar" aria-controls="mainNavbar" aria-expanded="false" aria-label="Toggle navigation">
                     <span class="navbar-toggler-icon"></span>
@@ -64,31 +67,47 @@
                                     <!--Examples &amp; Pages-->
                                     <div class="dropdown-menu navbar-dark bg-primary">
                                           <a class="dropdown-item" href="/trabajo">Ofertas de empleo</a>
+                                          <a class="dropdown-item" href="/servicios">Servicios</a>  
                                     </div>
                         </li>
 
 
-                      
                         <li class="nav-item">
                                 <a class="nav-link" href="/beneficios">Beneficios</a>
                         </li>
 
                         <li class="nav-item">
-                                <a class="nav-link" href="/acerca">Productos</a>
+                                <a class="nav-link" href="/acerca">Conocenos</a>
                         </li>
 
+                        
+                        {% if user.is_authenticated %}
+                        <li class="nav-item">
+                                <a class="nav-link" href="/perfil">Perfil</a>
+                        </li>
+                        <li class="has-children">
+                            <div class="jp_top_header_right_cont">
+                                <li><a href="{% url 'logout' %}"><i class="fa fa-sign-in"></i>&nbsp; LOGOUT</a></li>
+                                
+                            </div>
+                        </li>                        
+                        {% else %}
                         <li class="nav-item">
                                 <a class="nav-link" href="/contacto">Contactos</a>
                         </li>
                         <li class="has-children">
-                        <div class="jp_top_header_right_cont">
+                            <div class="jp_top_header_right_cont">
                                 <li><a href="{% url 'login' %}"><i class="fa fa-sign-in"></i>&nbsp; LOGIN</a></li>
-                            
-                        </div>
+                                
+                            </div>
+                        </li>
+                        {% endif%}                
                     </ul>
                 </div>
             </div>
         </nav>
+
+
 
         <!-- Jumbtron / Slider -->
         <div class="jumbotron-wrap jumbotron-image mb-0">
