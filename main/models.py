@@ -3,7 +3,7 @@ from django.contrib.auth.models import User
 
 
 class Estatico(models.Model):
-	titulo 		= models.CharField(max_length=45)
+	titulo 		= models.CharField(max_length=200) 
 	correo 		= models.EmailField(max_length=45)
 	telefono1 	= models.IntegerField()
 	telefono2 	= models.IntegerField()
@@ -18,7 +18,7 @@ class Estatico(models.Model):
 
 
 class Noticia(models.Model):
-	titulo 		= models.CharField(max_length=50)
+	titulo 		= models.CharField(max_length=200)
 	fecha 		= models.DateTimeField('Fecha de Guardado')
 	descripcion = models.TextField()
 	enlace 		= models.CharField(max_length=500)
@@ -36,8 +36,8 @@ class Trabajo(models.Model):
 		(COMPLITE_TIME, 'Tiempo completo'),
 	)
 
-	titulo 		= models.CharField(max_length=70)
-	subtitulo 	= models.CharField(max_length=70)
+	titulo 		= models.CharField(max_length=150)
+	subtitulo 	= models.CharField(max_length=100)
 	descripcion = models.TextField()	
 	tipo 		= models.CharField(max_length=20, choices=CHOICES, default=COMPLITE_TIME)
 	salario 	= models.CharField(max_length=20)
